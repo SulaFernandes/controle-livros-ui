@@ -12,25 +12,25 @@
     </ng-template>
     <ng-template pTemplate="header">
         <tr>
-            <th>Titulo</th>
-            <!--<th>Imagem</th>-->
+            <th>Título</th>
+            <th>Imagem</th>
             <th>Autor</th>
             <th>Volume</th>
-            <th>Paginas</th>
-            <th>Status</th>
+            <th>Páginas</th>
+            <th>Status leitura</th>
             <th>Ações</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-livro>
         <tr>
             <td>{{livro.titulo}}</td>
-            <!--<td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>-->
+            <td><img [src]="'assets/images/capa.jpg' + livro.imagem" [alt]="livro.imagem" width="100" height="100" class="shadow-4" /></td>
             <td>{{livro.autor}}</td>
             <td>{{livro.volume}}</td>
             <td>{{livro.qtdPaginas}}</td>
             <td>{{livro.stleitura}}</td>
             <td>
-              <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"></button>
+              <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success" [style]="{'margin-right': '.5em'}"></button>
               <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"></button>
           </td>
         </tr>

@@ -1,0 +1,127 @@
+<p-card>
+    <div class="text-2xl font-medium text-purple-500 mb-3">Cadastrar Livro</div>
+    <form autocomplete="off" (ngSubmit)="salvar()" [formGroup]="livrosCadastro" #formDir="ngForm">
+        <div class="p-fluid grid"> 
+            <div class="field col-12 md:col-9">
+                <p-fileUpload name="myfile[]" url="./upload.php" chooseLabel="Imagem"></p-fileUpload>
+                <!--<p-fileUpload #fubauto mode="basic" name="demo[]" url="./upload.php" accept="image/*" [auto]="true" chooseLabel="Browse"></p-fileUpload>-->
+            </div>            
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label">
+                    <input type="text" pInputText name="titulo" formControlName="titulo" required minlength="5"> 
+                    <label for="inputtext">Título</label>
+                    <div *ngIf="titulo.invalid && formDir.submitted" class="validation-error">
+                        <p *ngIf="titulo.errors?.['required']">O título é obrigatório</p>
+                        <p *ngIf="titulo.errors?.['minlength']">Tamanho mínimo de 5 caracteres</p>
+                    </div>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label">
+                    <input type="text" id="inputtext" pInputText formControlName="autor" required minlength="5"> 
+                    <label for="inputtext">Autor</label>
+                    <div *ngIf="autor.invalid && formDir.submitted" class="validation-error">
+                        <p *ngIf="autor.errors?.['required']">O autor é obrigatório</p>
+                        <p *ngIf="autor.errors?.['minlength']">Tamanho mínimo de 5 caracteres</p>
+                    </div>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label">
+                    <input type="text" id="inputtext-left" pInputText formControlName="editora" minlength="5"> 
+                    <label for="inputtext-left">Editora</label>
+                    <div *ngIf="editora.invalid && formDir.submitted" class="validation-error">
+                        <p *ngIf="editora.errors?.['minlength']">Tamanho mínimo de 5 caracteres</p>
+                    </div>
+                </span>
+            </div>
+            <div class="field col-12 md:col-2">
+                <span class="p-float-label">
+                    <input type="text" id="inputtext" pInputText formControlName="volume" minlength="5"> 
+                    <label for="inputtext">Volume</label>
+                    <div *ngIf="volume.invalid && formDir.submitted" class="validation-error">
+                        <p *ngIf="volume.errors?.['minlength']">Tamanho mínimo de 5 caracteres</p>
+                    </div>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label">
+                    <input type="text" id="inputtext" pInputText formControlName="edicao" minlength="5"> 
+                    <label for="inputtext">Edição</label>
+                    <div *ngIf="edicao.invalid && formDir.submitted" class="validation-error">
+                        <p *ngIf="edicao.errors?.['minlength']">Tamanho mínimo de 5 caracteres</p>
+                    </div>
+                </span>
+            </div>
+            <div class="field col-12 md:col-2">
+                <span class="p-float-label">
+                    <p-inputNumber inputId="inputnumber" formControlName="qtdPaginas"></p-inputNumber>
+                    <label for="inputnumber">Quantidade de páginas</label>
+                    <div *ngIf="qtdPaginas.invalid && formDir.submitted" class="validation-error">
+                        <p *ngIf="qtdPaginas.errors?.['required']">O campo é obrigatório</p>
+                    </div>
+                </span>
+            </div>
+            <div class="field col-12 md:col-2">
+                <span class="p-float-label">
+                    <p-inputNumber inputId="inputnumber" formControlName="qtdLivros"></p-inputNumber>
+                    <label for="inputnumber">Quantidade de livros</label>
+                    <div *ngIf="qtdLivros.invalid && formDir.submitted" class="validation-error">
+                        <p *ngIf="qtdLivros.errors?.['required']">O campo é obrigatório</p>
+                    </div>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label">
+                    <p-dropdown inputId="dropdown" [options]="stleitura"></p-dropdown>
+                    <label for="dropdown">Status leitura</label>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label">
+                    <p-dropdown inputId="dropdown" [options]="categorias" [filter]="true"></p-dropdown>
+                    <label for="dropdown">Categoria</label>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label">
+                    <textarea inputId="textarea" rows="3" style="resize: none;" cols="30" pInputTextarea formControlName="sinopse" minlength="30"></textarea>
+                    <label for="textarea">Sinopse</label>
+                    <div *ngIf="sinopse.invalid && formDir.submitted" class="validation-error">
+                        <p *ngIf="sinopse.errors?.['minlength']">Tamanho mínimo de 30 caracteres</p>
+                    </div>
+                </span>
+            </div>
+            <div class="field col-12 md:col-12 text-lg font-medium text-purple-500 mb-3">Dados compra do livro</div>
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label">
+                    <input type="text" id="inputtext-left" pInputText formControlName="ljcompra" minlength="5"> 
+                    <label for="inputtext-left">Loja de compra</label>
+                    <div *ngIf="ljcompra.invalid && formDir.submitted" class="validation-error">
+                        <p *ngIf="ljcompra.errors?.['minlength']">Tamanho mínimo de 5 caracteres</p>
+                    </div>
+                </span>
+            </div>
+            <div class="field col-12 md:col-4">
+                <span class="p-float-label">
+                    <input type="text" id="inputtext-left" pInputText formControlName="descricao" minlength="5"> 
+                    <label for="inputtext-left">Descrição</label>
+                    <div *ngIf="descricao.invalid && formDir.submitted" class="validation-error">
+                        <p *ngIf="descricao.errors?.['minlength']">Tamanho mínimo de 5 caracteres</p>
+                    </div>
+                </span>
+            </div>
+            <div class="field col-12 md:col-3">
+                <span class="p-float-label">
+                    <p-inputNumber inputId="inputnumber" mode="decimal" [minFractionDigits]="2"></p-inputNumber>
+                    <label for="inputnumber">Valor do livro</label>
+                </span>
+            </div>
+        </div>
+        <div>
+            <p-button label="Salvar" type="submit" icon="pi pi-check"></p-button>
+            <p-button label="Cancelar" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+        </div>
+    </form>
+    
+</p-card>

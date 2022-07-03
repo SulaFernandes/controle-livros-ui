@@ -1,38 +1,42 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 //Rotas
 import { AppRoutingModule } from './app-routing.module';
 //Componentes
 import { AppComponent } from './app.component';
-import { LivrosPesquisaComponent } from './livros-pesquisa/livros-pesquisa.component';
-import { NavbarComponent } from './navbar/navbar.component';
+//import { LivrosPesquisaComponent } from './livros/livros-pesquisa/livros-pesquisa.component'; 
+//import { NavbarComponent } from './core/navbar/navbar.component';
+//import { LivrosCadastroComponent } from './livros/livros-cadastro/livros-cadastro.component';
+//import { LoginFormComponent } from './seguranca/login-form/login-form.component';
+import { HomeModule } from './home/home.module';
+import { LivrosModule } from './livros/livros.module';
+import { CoreModule } from './core/core.module';
+import { SegurancaModule } from './seguranca/seguranca.module';
 
-//PRIMENG
-import { TabViewModule } from 'primeng/tabview';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { TableModule } from 'primeng/table';
-import { TooltipModule } from 'primeng/tooltip';
-import { MenubarModule } from 'primeng/menubar';
-import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LivrosPesquisaComponent,
-    NavbarComponent
+    //LivrosPesquisaComponent,
+    //NavbarComponent,
+    //LivrosCadastroComponent,
+    //LoginFormComponent,
  
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    TabViewModule,
-    InputTextModule,
-    ButtonModule,
-    TableModule,
-    TooltipModule,
-    MenubarModule,
-    CardModule
+    FormsModule,
+    //ReactiveFormsModule,
+
+    HomeModule,
+    LivrosModule,
+    CoreModule,
+    SegurancaModule
       
   ],
   providers: [],

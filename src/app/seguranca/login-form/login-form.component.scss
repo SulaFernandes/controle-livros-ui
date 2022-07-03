@@ -1,0 +1,12 @@
+:host ::ng-deep {
+
+    @media (min-width: 800px) {
+        .p-card {
+            width: 600px;
+            margin: 30px auto;
+            background-color: #F8F9FA;
+        }
+    }
+
+    
+}
