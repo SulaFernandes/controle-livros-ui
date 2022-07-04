@@ -19,9 +19,6 @@ import { SegurancaRoutingModule } from './seguranca-routing.module';
     CheckboxModule, 
     ButtonModule,
     SegurancaRoutingModule
-  ],
-  exports: [
-    LoginFormComponent
   ]
 })
 export class SegurancaModule { }

@@ -37,7 +37,7 @@ export class LivrosCadastroComponent implements OnInit {
       edicao: new FormControl('', [Validators.minLength(5)]),
       qtdPaginas: new FormControl('', [Validators.required]),
       qtdLivros: new FormControl('', [Validators.required]),
-      sinopse: new FormControl('', [Validators.minLength(50)]),
+      sinopse: new FormControl('', [Validators.maxLength(350)]),
       ljcompra: new FormControl('', [Validators.minLength(5)]),
       descricao: new FormControl('', [Validators.minLength(5)]),
     });

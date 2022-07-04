@@ -10,11 +10,6 @@ export class NavbarComponent implements OnInit {
 
   menuItems = [
     {
-      label: 'Login',
-      icon: 'pi pi-fw pi-home',
-      routerLink: '/login'
-    },
-    {
       label: 'Home',
       icon: 'pi pi-fw pi-home',
       routerLink: '/home'
@@ -42,5 +37,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  sair() {
+    this.router.navigate(['/login']);
+  }
+  
 
 }

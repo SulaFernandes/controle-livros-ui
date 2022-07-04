@@ -6,7 +6,7 @@ import { LivrosPesquisaComponent } from './livros/livros-pesquisa/livros-pesquis
 import { LoginFormComponent } from './seguranca/login-form/login-form.component';
 
 const routes: Routes = [
-  //{ path: 'login', component: LoginFormComponent },
+  
   { path: '', loadChildren: () => import('../app/seguranca/seguranca.module').then(mod => mod.SegurancaModule) },
   { path: '', loadChildren: () => import('../app/home/home.module').then(mod => mod.HomeModule) },
   { path: 'livros', loadChildren: () => import('../app/livros/livros.module').then(mod => mod.LivrosModule) },

@@ -9,12 +9,12 @@ export class LivrosPesquisaComponent implements OnInit {
 
   livros = [
 
-    { titulo: 'O Ladrão de Raios', imagem: '', autor: 'RICK RIORDAN', volume: '1', qtdPaginas: '351', categoria: 'Aventura', stleitura: 'Leitura concluida' },
-    { titulo: 'O Mar de Monstros', imagem: '', autor: 'RICK RIORDAN', volume: '2', qtdPaginas: '351', categoria: 'Aventura', stleitura: 'Leitura concluida'},
-    { titulo: 'A bolsa amarela', imagem: '', autor: 'RICK RIORDAN', volume: '2', qtdPaginas: '351', categoria: 'Aventura', stleitura: 'Leitura concluida' },
-    { titulo: 'A pedra filosofal', imagem: '', autor: 'RICK RIORDAN', volume: '2', qtdPaginas: '351', categoria: 'Aventura', stleitura: 'Leitura concluida' },
-    { titulo: 'A ordem da fenix', imagem: '', autor: 'RICK RIORDAN', volume: '2', qtdPaginas: '351', categoria: 'Aventura', stleitura: 'Leitura concluida' },
-    { titulo: 'Orgulho e preconceito', imagem: '', autor: 'RICK RIORDAN', volume: '2', qtdPaginas: '351', categoria: 'Aventura', stleitura: 'Leitura concluida' }
+    { titulo: 'As Crônicas de Nárnia', imagem: '', autor: 'C.S.Lewis', volume: 'vol. único', qtdPaginas: '750', stleitura: 'Leitura concluida' },
+    { titulo: 'A Revolução dos Bichos', imagem: '', autor: 'George Orwell', volume: 'vol. único', qtdPaginas: '96', stleitura: 'Não lido'},
+    { titulo: 'O Hobbit', imagem: '', autor: 'J.R.R.Tolkien', volume: 'vol.único', qtdPaginas: '336', stleitura: 'Não lido' },
+    { titulo: 'As aventuras de Pi', imagem: '', autor: 'Yann Martel', volume: 'vol. único', qtdPaginas: '261', stleitura: 'Leitura concluida' },
+    { titulo: 'Viagem ao centro da terra', imagem: '', autor: 'Júlio Verne', volume: 'vol. único', qtdPaginas: '189', stleitura: 'Leitura concluida' },
+    { titulo: 'O Último Olimpiano', imagem: '', autor: 'Rick Riordan', volume: 'vol. 5', qtdPaginas: '227', stleitura: 'Não lido' }
       
   ];
   
